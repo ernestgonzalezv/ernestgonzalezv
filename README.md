@@ -1,7 +1,6 @@
+# Ernesto González
 
-
-# Ernesto González  
-### Android Engineer · Kotlin · Jetpack Compose  
+### Android Engineer · Kotlin · Jetpack Compose
 
 ---
 
@@ -13,21 +12,27 @@ data class Ernesto(
     val architecture: List<String> = listOf("MVVM", "Clean Architecture", "MVI"),
     val alsoKnows: List<String> = listOf(".NET", "Django", "Angular", "Vue")
 )
-````
+```
 
 ---
 
-## 🤖 Android
+## 🤖 Android (Modern Stack)
 
 * <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" width="14"/> Android
 * <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" width="14"/> Kotlin
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jetpackcompose/jetpackcompose-original.svg" width="14"/> Jetpack Compose
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gradle/gradle-original.svg" width="14"/> Gradle
-* 🧩 Hilt
-* 🗄️ Room
-* 🌐 Retrofit
-* 🔁 Coroutines
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" width="14"/> Android Studio
+* 🧭 Jetpack Compose (modern declarative UI)
+* 🏗️ MVVM + Clean Architecture
+* 🧠 MVI (state-driven architecture)
+* ⚡ Coroutines + Flow (asynchronous reactive programming)
+* 🧩 Hilt (Dependency Injection)
+* 🌐 Retrofit + OkHttp (networking)
+* 🗄️ Room + DataStore (modern local persistence)
+* 🧬 Kotlin Serialization / Gson
+* 🧪 JUnit + MockK (unit testing)
+* 🧪 Espresso (UI testing)
+* 📦 Gradle Kotlin DSL
+* 🔥 Firebase (Auth / Firestore / Push Notifications)
+* 📱 Material 3 Design System
 
 ---
 
@@ -41,14 +46,32 @@ data class Ernesto(
 
 ---
 
-## 🌐 Backend & Frontend
+## 🌐 Backend
 
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original.svg" width="14"/> .NET
+### Django (Python)
+
 * <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg" width="14"/> Django
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg" width="14"/> Angular
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg" width="14"/> Vue.js
-* REST APIs
-* GraphQL
+* 🧪 Django Test Framework (unittest-based testing)
+* 🧪 pytest + pytest-django (modern testing approach)
+* 🧪 Factory Boy (test data generation)
+* 🔐 Django REST Framework (REST APIs)
+* ⚙️ Celery (background task processing)
+* 🗄️ Django ORM (database abstraction layer)
+* 🔒 Django Authentication & Permissions
+
+---
+
+### .NET (C#)
+
+* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original.svg" width="14"/> .NET Core / .NET 8
+* 🧪 xUnit (modern testing framework)
+* 🧪 NUnit (alternative testing framework)
+* 🧪 Moq (mocking library)
+* 🧪 FluentAssertions (clean assertions)
+* 🌐 ASP.NET Core Web API
+* 🧱 Entity Framework Core
+* 🔐 Identity + JWT Authentication
+* ⚙️ Background Services / Hosted Services
 
 ---
 
@@ -61,38 +84,54 @@ data class Ernesto(
 
 ---
 
-## 🧪 Testing & Quality
+## 🧪 Testing & Quality (Full Stack)
 
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="14"/> JUnit
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="14"/> Espresso
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="14"/> Mockito
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sonarqube/sonarqube-original.svg" width="14"/> SonarQube
+### Android / Kotlin
+
+* JUnit 5
+* MockK
+* Espresso
+* Turbine (Flow testing)
+
+### Django
+
+* pytest
+* pytest-django
+* Factory Boy
+* Django TestCase / APITestCase
+
+### .NET
+
+* xUnit
+* NUnit
+* Moq
+* FluentAssertions
 
 ---
 
 ## 🔄 CI/CD
 
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="14"/> GitHub Actions
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg" width="14"/> GitLab CI
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" width="14"/> Jenkins
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="14"/> Docker
+* GitHub Actions
+* GitLab CI
+* Jenkins
+* Docker
 
 ---
 
 ## ☁️ Cloud & DevOps
 
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="14"/> Docker
-* <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" width="14"/> Kubernetes
-* AWS
+* Docker
+* Kubernetes
+* AWS (EC2, S3, Lambda, RDS)
+* Firebase (serverless backend for mobile apps)
 
 ---
 
-
 ## 🧠 Soft Skills
 
-* Problem-solving focused on root cause, not symptoms
+* Problem-solving focused on root cause analysis
 * Strong code review culture
-* Clear technical communication
+* Clear and concise technical communication
 * Calm under pressure
-* Always learning and improving
+* Continuous learning mindset
 
