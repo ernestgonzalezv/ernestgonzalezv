@@ -2,28 +2,76 @@
 
 ### Mobile Engineer · iOS (Swift · SwiftUI) & Android (Kotlin · Jetpack Compose)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift"/>
+  <img src="https://img.shields.io/badge/SwiftUI-0071e3?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI"/>
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin"/>
+  <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"/>
+</p>
+
 I ship the same product on both platforms — feature for feature, in Swift and in Kotlin — plus the backends and web frontends they talk to.
 
 ---
 
-## 👨‍💻 About me
+## 👨‍💻 One product, two idioms
 
-```kotlin
-data class Ernesto(
-    val focus: List<String> = listOf("iOS · Swift · SwiftUI", "Android · Kotlin · Jetpack Compose"),
-    val architecture: List<String> = listOf("MVVM", "Clean Architecture", "MVI"),
-    val alsoBuilds: List<String> = listOf("Django REST APIs", "Next.js + React frontends"),
-    val alsoKnows: List<String> = listOf(".NET", "Django", "Angular", "Vue")
-)
-```
+Same screen, same architecture, written twice — because that is what shipping on both platforms actually means.
+
+<table>
+<tr>
+<th align="left">🍎 &nbsp;iOS · Swift</th>
+<th align="left">🤖 &nbsp;Android · Kotlin</th>
+</tr>
+<tr valign="top">
+<td>
 
 ```swift
-struct Ernesto {
-    let focus = ["iOS · Swift · SwiftUI", "Android · Kotlin · Jetpack Compose"]
-    let architecture = ["MVVM", "Clean Architecture", "Ports & Adapters"]
-    let concurrency = "Swift 6, strict data-race checking"
+@MainActor @Observable
+final class ViewModelNoteList {
+    private(set) var state: TypeUIListState = .loading
+
+    private let loadNotes: LogicLoadNotes
+
+    func reload() async {
+        do {
+            let notes = try await loadNotes(query: search)
+            state = resolve(for: notes)
+        } catch {
+            state = .failed(error.localizedDescription)
+        }
+    }
 }
 ```
+
+</td>
+<td>
+
+```kotlin
+class NoteListViewModel(
+    private val loadNotes: LoadNotes
+) : ViewModel() {
+
+    private val _state = MutableStateFlow<ListState>(Loading)
+    val state = _state.asStateFlow()
+
+    fun reload() = viewModelScope.launch {
+        _state.value = runCatching { loadNotes(query) }
+            .fold(
+                onSuccess = ::resolve,
+                onFailure = { Failed(it.messageOrEmpty()) }
+            )
+    }
+}
+```
+
+</td>
+</tr>
+</table>
+
+One state value the UI switches over — never `isLoading` + `notes` + `error` in parallel, which lets you represent *loading and failed at once* and forces every view to invent a precedence. Use cases injected one by one, so a view model's capabilities are exactly what its initialiser lists. The idioms differ; the reasoning does not.
 
 ---
 
@@ -49,8 +97,6 @@ struct Ernesto {
 * 📦 Swift Package Manager — modular targets with enforced dependency direction
 * 🛠️ XcodeGen (generated `.xcodeproj`, reviewable `project.yml`) + SwiftLint
 * 🚀 TestFlight, App Store releases, GitHub Actions on macOS runners
-
-**Reference implementation:** **[quill-ios](https://github.com/ernestgonzalezv/quill-ios)** — offline-first notes app. Three SPM modules with dependencies pointing inward, Swift 6 strict concurrency, SwiftData behind a port, a sync engine whose last-write-wins conflict resolution is a pure exhaustively-tested function, tombstoned deletes, App Intents + Spotlight, 4-language localisation, 50 tests, CI green on every push.
 
 ---
 
