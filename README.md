@@ -63,6 +63,6 @@ ENGINEERING  → Architecture, reliability, maintainability
 ## Contact
 
 <a href="mailto:ernestogonz0011@gmail.com">
-  <img src="https://img.shields.io/badge/email-ernestc1309%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" />
+  <img src="https://img.shields.io/badge/email-ernestogonz0011%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" />
 </a>
 
