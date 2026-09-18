@@ -60,10 +60,9 @@ WEB          → Production applications and internal platforms
 CLOUD        → Containers, CI/CD, AWS infrastructure
 ENGINEERING  → Architecture, reliability, maintainability
 ```
-
 ## Contact
 
-<a href="mailto:ernestc1309@gmail.com">
+<a href="mailto:ernestogonz0011@gmail.com">
   <img src="https://img.shields.io/badge/email-ernestc1309%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" />
 </a>
 
